@@ -1,4 +1,4 @@
-module.exports = (x, y, callback) => {
+export default (x, y, callback) => {
     if (x <= 0 || y <= 0) {
         callback(new Error(`Rectangle dimensions must be greater than zero. Received: ${x}, ${y}`));
     } else {
@@ -12,5 +12,5 @@ module.exports = (x, y, callback) => {
     }
 };
 
-exports.perimeter = (x, y) => 2 * (x + y);
-exports.area = (x, y) => x * y;
+export function perimeter(x, y) { return 2 * (x + y); }
+export function area(x, y) { return x * y; }
